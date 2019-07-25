@@ -3,9 +3,10 @@
     <button class="btn btn-primary">Add Recipe</button>
   </div>
 </div>
+<hr>
 <div class="row">
   <div class="col-md-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let recipe of receipes">
+    <a href="#" class="list-group-item clearfix" *ngFor="let receipe of receipes">
       <div class="float-left">
         <h4 class="list-group-item-heading">{{ receipe.name }}</h4>
         <p class="list-group-item-text">{{ receipe.description }}</p>
