@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Receipe } from '../receipe.model'
+import { Receipe } from '../receipe.model';
 
 @Component({
   selector: 'app-receipe-list',
