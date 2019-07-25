@@ -1,3 +1,9 @@
-<p>
-  Recipe Item !!
-</p>
+<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+  <div class="float-left">
+    <h4 class="list-group-item-heading">{{ receipe.name }}</h4>
+    <p class="list-group-item-text">{{ receipe.description }}</p>
+  </div>
+  <span class="float-right">
+    <img [src]="receipe.imgPath" alt="{{ receipe.name }}" class="img-responsive" style="max-height: 60px;">
+  </span>
+</a>

@@ -6,15 +6,6 @@
 <hr>
 <div class="row">
   <div class="col-md-12">
-    <a href="#" class="list-group-item clearfix" *ngFor="let receipe of receipes">
-      <div class="float-left">
-        <h4 class="list-group-item-heading">{{ receipe.name }}</h4>
-        <p class="list-group-item-text">{{ receipe.description }}</p>
-      </div>
-      <span class="float-right">
-        <img [src]="receipe.imgPath" alt="{{ receipe.name }}" class="img-responsive" style="max-height: 60px;">
-      </span>
-    </a>
-    <app-receipe-item></app-receipe-item>
+    <app-receipe-item  *ngFor="let receipeEl of receipes" [receipe]="receipeEl" (receipeSelected)="onReceipeSelected(receipeEl)"></app-receipe-item>
   </div>
 </div>
