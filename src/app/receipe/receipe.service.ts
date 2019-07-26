@@ -2,6 +2,7 @@ import { Injectable, EventEmitter } from '@angular/core';
 
 import { Receipe } from './receipe.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable({providedIn: 'root'})
 export class ReceipeService {
@@ -26,10 +27,14 @@ export class ReceipeService {
       ])
   ];
 
-  constructor() { }
+  constructor(private slService: ShoppingListService) { }
 
   getReceipes() {
     return this.receipes.slice();
+  }
+
+  onIngredientsAddedToList(ings: Ingredient[]) {
+
   }
 
 }
