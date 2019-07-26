@@ -34,7 +34,7 @@ export class ReceipeService {
   }
 
   onIngredientsAddedToList(ings: Ingredient[]) {
-
+    this.slService.IngredientsAddedToList(ings);
   }
 
 }
