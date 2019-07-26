@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Receipe } from '../../receipe.model';
-import { ReceipeService } from '../../receipe.service';
 
 @Component({
   selector: 'app-receipe-item',
@@ -11,13 +10,8 @@ import { ReceipeService } from '../../receipe.service';
 export class ReceipeItemComponent implements OnInit {
   @Input() receipe: Receipe;
 
-  constructor(private receipeService: ReceipeService) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-  onSelected() {
-    this.receipeService.receipeSelected.emit(this.receipe);
-  }
-
 }

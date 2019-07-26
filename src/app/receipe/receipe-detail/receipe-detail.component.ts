@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Receipe } from '../receipe.model';
 import { ReceipeService } from '../receipe.service';
@@ -9,9 +10,10 @@ import { ReceipeService } from '../receipe.service';
   styleUrls: ['./receipe-detail.component.css']
 })
 export class ReceipeDetailComponent implements OnInit {
-  @Input() receipe: Receipe;
+  receipe: Receipe;
 
-  constructor(private receipeService: ReceipeService) { }
+  constructor(private receipeService: ReceipeService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
