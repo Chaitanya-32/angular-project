@@ -15,6 +15,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ReceipeService } from './receipe/receipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { ReceipeStartComponent } from './receipe/receipe-start/receipe-start.component';
 
 @NgModule({
   imports: [ 
@@ -32,7 +33,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ReceipeItemComponent, 
     ShoppingListComponent, 
     ShoppingEditComponent, 
-    DropdownDirective
+    DropdownDirective, ReceipeStartComponent
   ],
   bootstrap:    [ AppComponent ],
   providers: [ReceipeService, ShoppingListService]
