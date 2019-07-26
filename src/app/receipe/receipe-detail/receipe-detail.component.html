@@ -8,32 +8,20 @@
     <h1>{{ receipe.name }}</h1>
   </div>
 </div>
-<div class="row" appDropdown>
+<div class="row">
   <div class="col-md-12" >
-    <div class="dropdown">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Manage Recipe
+    <div class="btn-group" appDropdown>
+      <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe
         <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu" appDropdown>
-        <li class="dropdown-item"><a href="#">Add to Shopping List</a></li>
-        <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
-        <li class="dropdown-item"><a href="#">Delete Recipe</a></li>
+      <ul class="dropdown-menu">
+        <li><a href="#">Add to Shopping List</a></li>
+        <li><a href="#">Edit Recipe</a></li>
+        <li><a href="#">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
 </div>
-
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
-
 <div class="row">
   <div class="col-md-12">
     {{ receipe.description }}

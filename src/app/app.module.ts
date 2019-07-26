@@ -12,10 +12,14 @@ import { ReceipeItemComponent } from './receipe/receipe-list/receipe-item/receip
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ReceipeServiceService } from './receipe/receipe-service.service';
+import { ReceipeService } from './receipe/receipe.service';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, HelloComponent, HeaderComponent, ReceipeComponent, ReceipeListComponent, ReceipeDetailComponent, ReceipeItemComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [ReceipeServiceService, ReceipeService, ShoppingListService]
 })
 export class AppModule { }
