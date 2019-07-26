@@ -11,10 +11,11 @@ import { ReceipeDetailComponent } from './receipe/receipe-detail/receipe-detail.
 import { ReceipeItemComponent } from './receipe/receipe-list/receipe-item/receipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ReceipeComponent, ReceipeListComponent, ReceipeDetailComponent, ReceipeItemComponent, ShoppingListComponent, ShoppingEditComponent],
+  declarations: [ AppComponent, HelloComponent, HeaderComponent, ReceipeComponent, ReceipeListComponent, ReceipeDetailComponent, ReceipeItemComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
