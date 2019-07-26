@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { AppRouterModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -16,8 +17,23 @@ import { ReceipeService } from './receipe/receipe.service';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, ReceipeComponent, ReceipeListComponent, ReceipeDetailComponent, ReceipeItemComponent, ShoppingListComponent, ShoppingEditComponent, DropdownDirective],
+  imports: [ 
+    BrowserModule, 
+    FormsModule,
+    AppRouterModule
+  ],
+  declarations: [ 
+    AppComponent, 
+    HelloComponent, 
+    HeaderComponent, 
+    ReceipeComponent, 
+    ReceipeListComponent, 
+    ReceipeDetailComponent, 
+    ReceipeItemComponent, 
+    ShoppingListComponent, 
+    ShoppingEditComponent, 
+    DropdownDirective
+  ],
   bootstrap:    [ AppComponent ],
   providers: [ReceipeService, ShoppingListService]
 })
