@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { Receipe } from '../receipe.model';
 import { ReceipeService } from '../receipe.service';
@@ -11,11 +11,18 @@ import { ReceipeService } from '../receipe.service';
 })
 export class ReceipeDetailComponent implements OnInit {
   receipe: Receipe;
+  id: number;
 
   constructor(private receipeService: ReceipeService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      (param: Params) => {
+        this.id = +param['id'];
+        this.receipe = this.receipeService.getReceipeById(this.id);
+      }
+    );
   }
 
   onAddToShoppingList() {

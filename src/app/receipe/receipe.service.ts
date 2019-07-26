@@ -33,6 +33,10 @@ export class ReceipeService {
     return this.receipes.slice();
   }
 
+  getReceipeById(index: number) {
+    return this.receipes.slice()[index];
+  }
+
   onIngredientsAddedToList(ings: Ingredient[]) {
     this.slService.IngredientsAddedToList(ings);
   }
